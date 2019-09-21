@@ -10,13 +10,13 @@ redirect_from:
 
 This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.io/cv/), [Publications](https://lukewys.github.io/publications/) and [blog posts](https://lukewys.github.io/year-archive/).
 
-#Bio
+# Bio
 
 4th year undergraduate student from Beijing University of Posts and Telecommunications, School of Automation.
 
 Currently working on controllable automatic music composition on symbolic music and expressive singing synthesis.
 
-#News
+# News
 
 1st August 2019: Started internship at Tencent AI Lab.
 
