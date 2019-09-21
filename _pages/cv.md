@@ -12,21 +12,15 @@ redirect_from:
 Download my [CV](https://lukewys.github.io/files/cv_yusongwu.pdf) [(中文)](https://lukewys.github.io/files/简历_中文_吴雨松.pdf).
 
 # Education
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.Eng. Beijing University of Posts and Telecommunications, 2016-now
 
 Work experience
 ======
-* Summer 2015: Research Assistant
+* 2019.8-now: Research Intern
   * Github University
   * Duties included: Tagging issues
   * Supervisor: Professor Git
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
   
 Skills
 ======
