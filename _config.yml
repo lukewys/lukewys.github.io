@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-# Site Settings
+# Site Settings # How to modify: http://archive.is/3TPas#selection-4323.0-4363.11
 locale                   : "en-US"
 title                    : "Yusong Wu's Personal Page"
 title_separator          : "-"
