@@ -16,6 +16,12 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 Currently working on controllable automatic music composition on symbolic music and expressive singing synthesis.
 
+# Research interests
+
+- Automatic symbolic music composition
+- Expressive singing synthesis
+- Reinforcement learning on game theory
+
 # Skills
 
 * Programming
@@ -25,13 +31,6 @@ Currently working on controllable automatic music composition on symbolic music 
   * Over 10 years of experience in orchestra, wind orchestra and marching band.
   * Play with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手)
   
-
-# Research interests
-
-- Automatic symbolic music composition
-- Expressive singing synthesis
-- Reinforcement learning on game theory
-
 # Blog
 
 My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
