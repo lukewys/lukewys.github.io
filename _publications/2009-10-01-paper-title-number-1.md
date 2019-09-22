@@ -6,7 +6,7 @@ excerpt: 'Measuring similarity of melodies to genre by building statistical mode
 date: 2019
 venue: 'Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019)'
 paperurl: 'TBD'
-citation: 'Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies", Yusong Wu, Shengchen Li, Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019) , Marseille, France, 14-18 Oct 2019.'
+citation: '"Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies", Yusong Wu, Shengchen Li, Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019) , Marseille, France, 14-18 Oct 2019.'
 ---
 
 "Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies", Yusong Wu, Shengchen Li, Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019) , Marseille, France, 14-18 Oct 2019.
