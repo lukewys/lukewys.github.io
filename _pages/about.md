@@ -16,6 +16,12 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 Currently working on controllable automatic music composition on symbolic music and expressive singing synthesis.
 
+# Skills
+
+
+# Blog
+
+My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 # News
 
@@ -25,6 +31,3 @@ Currently working on controllable automatic music composition on symbolic music 
 
 9th May 2019: Submitted a paper to CMMR (International Symposium on Computer Music Multidisciplinary Research) 2019.
 
-# Blog
-
-My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
