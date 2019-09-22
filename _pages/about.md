@@ -20,7 +20,7 @@ Currently working on controllable automatic music composition on symbolic music 
 
 - Automatic symbolic music composition
 - Expressive singing synthesis
-- Reinforcement learning on game theory
+- Reinforcement learning on game theory and playing games
 
 # Skills
 
