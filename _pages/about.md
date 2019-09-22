@@ -18,6 +18,19 @@ Currently working on controllable automatic music composition on symbolic music 
 
 # Skills
 
+* Programming
+  * C, C++, Python, Tensorflow, MATLAB
+* Music
+  * Over 15 years of experience playing percussion (proficient in timpani)
+  * Over 10 years of experience in orchestra, wind orchestra and marching band.
+  * Play with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手)
+  
+
+# Research interests
+
+- Automatic symbolic music composition
+- Expressive singing synthesis
+- Reinforcement learning on game theory
 
 # Blog
 
@@ -27,7 +40,7 @@ My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 1st August 2019: Started internship at Tencent AI Lab.
 
-15th July 2019: Submitted a paper to CSMT (China Conference on Sound and Music Technology) 2019.
+15th July 2019: (Accepted) Submitted a paper to CSMT (China Conference on Sound and Music Technology) 2019.
 
-9th May 2019: Submitted a paper to CMMR (International Symposium on Computer Music Multidisciplinary Research) 2019.
+9th May 2019: (Accepted) Submitted a paper to CMMR (International Symposium on Computer Music Multidisciplinary Research) 2019.
 
