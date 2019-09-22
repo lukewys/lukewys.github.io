@@ -8,13 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.io/cv/), [Publications](https://lukewys.github.io/publications/) and [blog posts](https://lukewys.github.io/year-archive/).
+This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.io/cv/) and [Publications](https://lukewys.github.io/publications/).
 
 # Bio
 
 4th year undergraduate student from Beijing University of Posts and Telecommunications, School of Automation.
 
 Currently working on controllable automatic music composition on symbolic music and expressive singing synthesis.
+
 
 # News
 
@@ -23,3 +24,7 @@ Currently working on controllable automatic music composition on symbolic music 
 15th July 2019: Submitted a paper to CSMT (China Conference on Sound and Music Technology) 2019.
 
 9th May 2019: Submitted a paper to CMMR (International Symposium on Computer Music Multidisciplinary Research) 2019.
+
+# Blog
+
+My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
