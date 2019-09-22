@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.io/cv/) and [Publications](https://lukewys.github.io/publications/).
+This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.io/cv/), [Publications](https://lukewys.github.io/publications/) and [blogs](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 # Bio
 
