@@ -6,7 +6,7 @@ excerpt: 'A symbolic music dataset of Guqin music for computational musicology a
 date: 2019-9-20
 venue: 'Proceedings of China Conference on Sound and Music Technology (CSMT 2019)'
 paperurl: 'TBD'
-citation: '"Guqin Dataset: A Symbolic Music Dataset", Yusong Wu, Shengchen Li, Proceedings of China Conference on Sound and Music Technology (CSMT 2019)'
+citation: 'Yusong Wu, Shengchen Li (2019). "Guqin Dataset: A Symbolic Music Dataset" <i>Proceedings of China Conference on Sound and Music Technology (CSMT 2019)</i>.'
 ---
 A symbolic music dataset of Guqin music for computational musicology analysis.
 
