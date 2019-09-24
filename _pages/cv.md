@@ -14,13 +14,18 @@ Download my [CV](https://lukewys.github.io/files/cv_yusongwu.pdf) [(中文)](htt
 # Education
 * B.Eng. Beijing University of Posts and Telecommunications, 2016-now
 
+Publications
+======
+  <ul>{% for post in site.publications %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
 Work experience
 ======
 * 2019.8-now: Research Intern
   * Tencent AI Lab
   * Research project: Expressive singing synthesis with Peking Opera as example. 
   * Supervisor: Chengzhu Yu
-
   
 # Bio
 
@@ -47,8 +52,3 @@ Currently working on controllable automatic music composition on symbolic music 
 
 My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
