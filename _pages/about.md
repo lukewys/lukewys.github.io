@@ -37,9 +37,11 @@ My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 # News
 
+23th September 2019: Submitted an extended abstract to ISMIR 2019 (Proceedings of the 20th International Society for Music Information Retrieval Conference)
+
 1st August 2019: Started internship at Tencent AI Lab.
 
-15th July 2019: (Accepted) Submitted a paper to CSMT (China Conference on Sound and Music Technology) 2019.
+15th July 2019: (Accepted) Submitted a paper to CSMT2019 (China Conference on Sound and Music Technology) 2019.
 
-9th May 2019: (Accepted) Submitted a paper to CMMR (International Symposium on Computer Music Multidisciplinary Research) 2019.
+9th May 2019: (Accepted) Submitted a paper to CMMR2019 (International Symposium on Computer Music Multidisciplinary Research) 2019.
 
