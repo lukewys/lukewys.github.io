@@ -3,7 +3,7 @@ title: "Highly Expressive Peking Opera Synthesis with Durian System"
 collection: publications
 permalink: /publications/ISMIR2019
 excerpt: 'A prototype Jingju synthesis method which can generate expressive Jingju synthesis given the phoneme and note-pitch duration.'
-date: 2019-11-4
+date: 2019-9-23
 venue: 'Proceedings of the 20th International Society for Music Information Retrieval Conference (ISMIR 2019)'
 paperurl: 'https://lukewys.github.io/files/ISMIR2019_lbd-correct_name.pdf'
 citation: 'Yusong Wu, Shengchen Li, Chenzhu Yu, Heng Lu, Chao Weng, Dong Yu (2019). "Highly Expressive Peking Opera Synthesis with Durian System" <i>Proceedings of the 20th International Society for Music Information Retrieval Conference (ISMIR 2019)</i>.'
