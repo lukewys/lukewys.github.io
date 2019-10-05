@@ -14,7 +14,7 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 4th year undergraduate student from Beijing University of Posts and Telecommunications, School of Automation.
 
-Currently working on controllable automatic music composition on symbolic music and expressive singing synthesis.
+Currently working on controllable automatic music composition and expressive singing synthesis.
 
 # Research interests
 
