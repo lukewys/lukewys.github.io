@@ -46,7 +46,7 @@ Currently working on controllable automatic music composition on symbolic music 
 - Music
   - Over 15 years of experience playing percussion (proficient in timpani)
   - Over 10 years of experience in orchestra, wind orchestra and marching band.
-  - Play with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手)
+  - Played with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手)
 
 # Blog
 
