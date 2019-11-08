@@ -42,6 +42,8 @@
 
 <h2 id="audio-samples">Audio Samples</h2>
 
+
+<h3>Singing Synthesis</h3>
 <p>To verify the ability of the proposed method to successfully generate the pitch expressiveness out of musical note, the proposed method is compared with the <b>original recording</b> and a <b>f0-based system where fundamental frequency (f0) is used as input instead of note.</b></p>
 
 <table><thead><tr>
@@ -105,18 +107,52 @@
 <td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Reconstruct_male_lseh-Wo_ben_shi-Qiong_lin_yan-qm-5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
 
-<p>As our model are conditioned on singer identity (a embedding vector for each singer), singer conversion is possible:</p>
+<h3>Singing Conversion</h3>
+
+<p>As our model are conditioned on singer identity (a embedding vector for each singer), singer conversion is possible, specifically, singing conversion across gender:</p>
 
 
 <table><thead><tr>
 <th style="text-align: center">Original-Female</th>
 <th style="text-align: center">Conversion-Male</th>
 </tr></thead><tbody><tr>
-<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/lseh-Wo_ben_shi-Qiong_lin_yan-qm/Reference_lseh-Wo_ben_shi-Qiong_lin_yan-qm-5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/f0/f0_Reconstruct_male_lseh-Wo_ben_shi-Qiong_lin_yan-qm-5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm/Reference_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_male_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
 
 
+<table><thead><tr>
+<th style="text-align: center">Original-Female</th>
+<th style="text-align: center">Conversion-Male</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm/Reference_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_male_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+<table><thead><tr>
+<th style="text-align: center">Original-Male</th>
+<th style="text-align: center">Conversion-Female</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/lseh-Wo_ben_shi-Qiong_lin_yan-qm/Reference_lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_female_lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original-Male</th>
+<th style="text-align: center">Conversion-Female</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/lseh-Wo_ben_shi-Qiong_lin_yan-qm/Reference_lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_female_lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+<h3>Score Input</h3>
+
+<p>In training, our note is obtained by note-transcription algorithm. To prove it can be generalised to score input, we used the published score of the recording to synthesis.</p>
+<p><b>Note:</b> the key and pitch contour of the score is different from the recording, that is why we do not use score-align in training.</p>
+
+        
     </main>
     </div>
 
