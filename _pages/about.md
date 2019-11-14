@@ -18,8 +18,9 @@ Currently working on expressive singing synthesis, specifically generating expre
 
 Previous working (and will be working if possible) on controllable automatic music composition.
 
-# [Publications]( https://lukewys.github.io/publications/ )
+# [Publications/Projects]( https://lukewys.github.io/publications/ )
 
+- (late-breaking demo, not formal publication)  [Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)
 - [Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019)
 - [Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)
 
@@ -46,7 +47,7 @@ My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 8th November 2019: Presented the late-breaking/demo poster "[Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)" on ISMIR 2019.
 
-21st October 2019: Submitted a paper "Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network" to ICASSP 2020 ( 45th International Conference on Acoustics, Speech, and Signal Processing).
+21st October 2019: Submitted a paper "Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network" to ICASSP 2020 ( 45th International Conference on Acoustics, Speech, and Signal Processing). Please check out for [audio samples](https://lukewys.github.io/files/ISMIR2019-audio-sample.html )
 
 16th October 2019: Presented poster presentation "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" on CMMR 2019.
 
