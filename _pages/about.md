@@ -12,7 +12,7 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 # Bio
 
-4th year undergraduate student from Beijing University of Posts and Telecommunications, School of Automation.
+4th year undergraduate student advised by [Shengchen Li]( https://shengchenli.github.io/ ) from Beijing University of Posts and Telecommunications, School of Automation.
 
 Currently working on expressive singing synthesis, specifically generating expressive Peking opera singing.
 
