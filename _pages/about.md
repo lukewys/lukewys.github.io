@@ -14,7 +14,14 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 4th year undergraduate student from Beijing University of Posts and Telecommunications, School of Automation.
 
-Currently working on controllable automatic music composition and expressive singing synthesis.
+Currently working on expressive singing synthesis, specifically generating expressive Peking opera singing.
+
+Previous working (and will be working if possible) on controllable automatic music composition.
+
+# Publications
+
+- [Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019)
+- [Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)
 
 # Research interests
 
@@ -37,11 +44,17 @@ My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 # News
 
-23th September 2019: Submitted an extended abstract to ISMIR 2019 (Proceedings of the 20th International Society for Music Information Retrieval Conference)
+8th November 2019: Presented the late-breaking/demo poster "[Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)" on ISMIR 2019.
+
+21st October 2019: Submitted a paper "Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network" to ICASSP 2020 ( 45th International Conference on Acoustics, Speech, and Signal Processing).
+
+16th October 2019: Presented poster presentation "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" on CMMR 2019.
+
+23th September 2019: (Accepted) Submitted an extended abstract "[Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)" to late/breaking demo session at ISMIR 2019 (Proceedings of the 20th International Society for Music Information Retrieval Conference).
 
 1st August 2019: Started internship at Tencent AI Lab.
 
-15th July 2019: (Accepted) Submitted a paper to CSMT2019 (China Conference on Sound and Music Technology) 2019.
+15th July 2019: (Accepted) Submitted a paper "[Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019)" to CSMT2019 (China Conference on Sound and Music Technology).
 
-9th May 2019: (Accepted) Submitted a paper to CMMR2019 (International Symposium on Computer Music Multidisciplinary Research) 2019.
+9th May 2019: (Accepted) Submitted a paper "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" to CMMR 2019 (International Symposium on Computer Music Multidisciplinary Research).
 
