@@ -18,7 +18,7 @@ Currently working on expressive singing synthesis, specifically generating expre
 
 Previous working (and will be working if possible) on controllable automatic music composition.
 
-# Publications
+# [Publications]( https://lukewys.github.io/publications/ )
 
 - [Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019)
 - [Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)
