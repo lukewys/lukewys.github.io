@@ -7,7 +7,7 @@
 
 # Site Settings # How to modify: http://archive.is/3TPas#selection-4323.0-4363.11
 locale                   : "en-US"
-title                    : "Yusong Wu's Personal Page"
+title                    : "Yusong Wu"
 title_separator          : "-"
 name                     : &name "Yusong Wu"
 description              : &description "personal description"
