@@ -8,7 +8,7 @@
 # Site Settings # How to modify: http://archive.is/3TPas#selection-4323.0-4363.11
 locale                   : "en-US"
 title                    : "Yusong Wu"
-title_separator          : "-"
+title_separator          : ""
 name                     : &name "Yusong Wu"
 description              : &description "personal description"
 url                      : https://lukewys.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
