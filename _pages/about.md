@@ -18,11 +18,11 @@ Currently working on expressive singing synthesis, specifically generating expre
 
 Previous working (and will be working if possible) on controllable automatic music composition.
 
-# [Publications/Projects]( https://lukewys.github.io/publications/ )
+# [Publications]( https://lukewys.github.io/publications/ )
 
-- (late-breaking demo, not formal publication)  [Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)
-- [Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019)
-- [Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)
+- (Submitted to ICASSP 2020) Yusong Wu, Shengchen Li, Chengzhu Yu, Heng Lu, Chao Weng, Liqiang Zhang, Dong Yu (2020). "[Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network]( https://lukewys.github.io/files/ISMIR2019-audio-sample.html )" 
+-  Yusong Wu, Shengchen Li (2019). "[Guqin Dataset: A Symbolic Music Dataset](https://lukewys.github.io/publications/CSMT2019) " *Proceedings of China Conference on Sound and Music Technology (CSMT 2019)*. 
+-  Yusong Wu, Shengchen Li (2019). "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" *Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019)*. 
 
 # Research interests
 
@@ -37,7 +37,7 @@ Previous working (and will be working if possible) on controllable automatic mus
 * Music
   * Over 15 years of experience playing percussion (proficient in timpani)
   * Over 10 years of experience in orchestra, wind orchestra and marching band.
-  * Play with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手)
+  * Play with famous Chinese pop singer Jie Zhang (张杰) in 2016 on the show "Singer". (我是歌手) [Video]( https://www.iqiyi.com/v_19rrbclxtw.html )
   
 # Blog
 
