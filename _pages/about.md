@@ -23,7 +23,7 @@ Previous working (and will be working if possible) on controllable automatic mus
 - (Submitted to ICASSP 2020) **Yusong Wu**, Shengchen Li, Chengzhu Yu, Heng Lu, Chao Weng, Liqiang Zhang, Dong Yu (2020). "[Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network]( https://lukewys.github.io/files/ISMIR2019-audio-sample.html )"  Submitted to *45th International Conference on Acoustics, Speech, and Signal Processing*  (ICASSP 2020)
 - (Submitted to ICASSP 2020) Liqiang Zhang, Chengzhu Yu, Heng Lu, Chao Weng, **Yusong Wu**, Xiang Xie, Zijin Li, Dong Yu (2020) "[Learning Singing From Speech]( https://tencent-ailab.github.io/learning_singing_from_speech/ )" Submitted to *45th International Conference on Acoustics, Speech, and Signal Processing*  (ICASSP 2020)
 -  **Yusong Wu**, Shengchen Li (2019). "[ Guqin Dataset: A symbolic music dataset of Chinese Guqin collection ](https://lukewys.github.io/publications/CSMT2019) " *Proceedings of China Conference on Sound and Music Technology (CSMT 2019)*. 
--  **Yusong Wu**, Shengchen Li (2019). "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" *Proceedings of Computer Music Multidisciplinary Research 2019 (CMMR 2019)*. 
+-  **Yusong Wu**, Shengchen Li (2019). "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" *14th International Symposium on Computer Music Multidisciplinary Research (CMMR 2019)*. 
 
 # Research interests
 
