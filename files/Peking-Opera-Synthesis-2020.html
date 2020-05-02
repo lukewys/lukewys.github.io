@@ -43,7 +43,7 @@
   <li>Then <b>alignment model</b> is used to add note information as well as singer identity embedding and align all feature sequence with the output frame.</li>
   <li>In training, phoneme duration is given by dataset annotation, while in inference, it is predicted by a duration model.</li>
   <li><b>Auto-regressive decoder</b> is used to generate <b>spectrogram</b>.</li>
-  <li><b>WaveRNN</b> is used to generate audio signal from spectrogram.</li>
+  <li><b>WaveRNN</b> is used to generate audio signal from spectrogram at a sample rate of 24kHz and sample depth of 9 bits.</li>
 </ul>
 <img src="Peking_Opera_Synthesis-2020/model_all.png" alt="Model Architecture">
 
