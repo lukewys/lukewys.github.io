@@ -112,45 +112,78 @@
 <h3>Score Input</h3>
 
 <p>In training, our note is obtained by note-transcription algorithm. To prove it can be generalised to score input, we used the published score of the recording to synthesis.</p>
+<p>To demonstrate the proposed duration model gives better duration prediction than other methods, the generated samples of using the proposed duration model are compared with samples generated using other fitting heuristic-based methods.</p>
 
 <p>Generate using Peking opera score:</p>
 
 <img src="Peking_Opera_Synthesis-2020/score_image/muguiyingguashuai.png" alt="score">
 <table><thead><tr>
-<th style="text-align: center">Score Input</th>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
 </tr></thead><tbody><tr>
 <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
 
 <img src="Peking_Opera_Synthesis-2020/score_image/qionglinyan.png" alt="score">
 <table><thead><tr>
-<th style="text-align: center">Score Input</th>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
 </tr></thead><tbody><tr>
 <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
 
 <img src="Peking_Opera_Synthesis-2020/score_image/dingjunshan.png" alt="score">
 <table><thead><tr>
-<th style="text-align: center">Score Input</th>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
 </tr></thead><tbody><tr>
 <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-</tr></tbody></table><br><br>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
 
-<p>And also singing with Peking opera style generated from pop songs:</p>
+
+<p>Singing with Peking opera style generated from pop songs:</p>
 
 <img src="Peking_Opera_Synthesis-2020/score_image/qinghuaci.png" alt="score">
 <table><thead><tr>
-<th style="text-align: center">Score Input</th>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
 </tr></thead><tbody><tr>
 <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
 
 <img src="Peking_Opera_Synthesis-2020/score_image/fenshoukuaile.png" alt="score">
 <table><thead><tr>
-<th style="text-align: center">Score Input</th>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
 </tr></thead><tbody><tr>
 <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 </tr></tbody></table>
+
 
         <h3>Singing Conversion</h3>
 
