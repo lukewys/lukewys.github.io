@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.55.5" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/custom.css">
+<title>Audio Sample of &#34;Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network&#34; </title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<header role="banner">
+
+
+
+
+	</header>
+
+
+    <main role="main">
+
+<h1 id="title">Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network</h1>
+
+<P>Yusong Wu, Shengchen Li, Chengzhu Yu, Heng Lu, Chao Weng, Liqiang Zhang, Dong Yu<p>
+
+<p>This paper presents a method that generates expressive singing voice of Peking opera from music score. The synthesis of expressive opera singing usually requires pitch contours to be extracted as the training data, which relies on techniques and is not able to be manually labeled. With the Duration Informed Attention Network (DurIAN), this paper makes use of musical note instead of pitch contours for expressive opera singing synthesis. The proposed method enables human annotation being combined with automatic extracted features to be used as training data thus the proposed method gives extra flexibility in data collection for Peking opera singing synthesis. Comparing with the expressive singing voice of Peking opera synthesised by pitch contour based system, the proposed musical note based system produces comparable singing voice in Peking opera with expressiveness in various aspects.</p>
+<p>In short: the model generates <b>singing voice</b> of <b>Peking Opera</b> from note and phoneme sequence where <b>pitch, dynamics and timbre</b> are jointly sampled. A LSTM with Mixture density output is used as duration model and and Lagrange Multiplier optimization is performed to better predict phoneme duration under note duration constrain. (See more in paper.)</p>
+
+<!--超链接：paper的地址-->
+<a href="https://lukewys.github.io/files/ISMIR2019-audio-sample.html">Previous Demo</a><br>
+<!--        <a href="https://lukewys.github.io/files/ISMIR2019-audio-sample.html">Paper</a>-->
+
+<h2 id="methods">How it works?</h2>
+        <ul>
+  <li>A <b>phoneme</b> encoder first encode contextual phoneme features.</li>
+  <li>Then <b>alignment model</b> is used to add note information as well as singer identity embedding and align all feature sequence with the output frame.</li>
+  <li>In training, phoneme duration is given by dataset annotation, while in inference, it is predicted by a duration model.</li>
+  <li><b>Auto-regressive decoder</b> is used to generate <b>spectrogram</b>.</li>
+  <li><b>WaveRNN</b> is used to generate audio signal from spectrogram at a sample rate of 24kHz and sample depth of 9 bits.</li>
+</ul>
+<img src="Peking_Opera_Synthesis-2020/model_all.png" alt="Model Architecture">
+
+<h2 id="audio-samples">Audio Samples</h2>
+
+
+<h3>Singing Synthesis</h3>
+<p>To verify the ability of the proposed method to successfully generate the pitch expressiveness out of musical note, the proposed method is compared with the <b>original recording</b> and a <b>f0-based system where fundamental frequency (f0) is used as input instead of note.</b></p>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/lseh-Wo_ben_shi-Qiong_lin_yan-qm-3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/lseh-Wo_ben_shi-Qiong_lin_yan-qm-3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/lseh-Wo_ben_shi-Qiong_lin_yan-qm-4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/lseh-Wo_ben_shi-Qiong_lin_yan-qm-4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original</th>
+<th style="text-align: center">Proposed Method</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/original/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/reconstruction/20170327LiaoJiaNi@lsxp-Yi_ma_li-Wu_jia_po-nacta-3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<h3>Score Input</h3>
+
+<p>In training, our note is obtained by note-transcription algorithm. To prove it can be generalised to score input, we used the published score of the recording to synthesis.</p>
+<p>To demonstrate the proposed duration model gives better duration prediction than other methods, the generated samples of using the proposed duration model are compared with samples generated using other fitting heuristic-based methods.</p>
+
+<p>Generate using Peking opera score:</p>
+
+<img src="Peking_Opera_Synthesis-2020/score_image/muguiyingguashuai.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/daxp-MengTingDe-MuGuiYingGuaShuai.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<img src="Peking_Opera_Synthesis-2020/score_image/qionglinyan.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/QiongLinYan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<img src="Peking_Opera_Synthesis-2020/score_image/dingjunshan.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/ZheYiFeng_DingJunShan_first.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+        <img src="Peking_Opera_Synthesis-2020/score_image/silangtanmu-1.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/SiLangTan-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+        <img src="Peking_Opera_Synthesis-2020/score_image/silangtanmu-2.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/SiLangTan-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+        <img src="Peking_Opera_Synthesis-2020/score_image/wupenji-1.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/WuPenJi-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+        <img src="Peking_Opera_Synthesis-2020/score_image/hongyangdong-1.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/HongYangDong-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+<p>Singing with Peking opera style generated from pop songs:</p>
+
+<img src="Peking_Opera_Synthesis-2020/score_image/qinghuaci.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/QingHuaCi.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<img src="Peking_Opera_Synthesis-2020/score_image/fenshoukuaile.png" alt="score">
+<table><thead><tr>
+<th style="text-align: center">MDN-Lag (proposed)</th>
+    <th style="text-align: center">MDN-fit</th>
+    <th style="text-align: center">MSE-fit</th>
+    <th style="text-align: center">Mean-fit</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/audio_score_input/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MDN-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/MSE-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style="text-align: center"><audio controls="controls" ><source src="Peking_Opera_Synthesis-2020/Mean-fit/FenShouKuaiLe.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+        <h3>Singing Conversion</h3>
+
+<p>As our model are conditioned on singer identity (an embedding vector for each singer), singer conversion is possible, specifically, singing conversion across gender:</p>
+
+
+<table><thead><tr>
+<th style="text-align: center">Original-Female</th>
+<th style="text-align: center">Conversion-Male</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm/Reference_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_male_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+<table><thead><tr>
+<th style="text-align: center">Original-Female</th>
+<th style="text-align: center">Conversion-Male</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm/Reference_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_male_daxp-Meng_ting_de-Mu_Gui_ying_gua_shuai04-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+
+<table><thead><tr>
+<th style="text-align: center">Original-Male</th>
+<th style="text-align: center">Conversion-Female</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/lseh-Wo_ben_shi-Qiong_lin_yan-qm/Reference_lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_female_lseh-Wo_ben_shi-Qiong_lin_yan-qm-1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<table><thead><tr>
+<th style="text-align: center">Original-Male</th>
+<th style="text-align: center">Conversion-Female</th>
+</tr></thead><tbody><tr>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/reference/lseh-Wo_ben_shi-Qiong_lin_yan-qm/Reference_lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style="text-align: center"><audio controls="controls" ><source src="ISMIR2019-audio-sample/note_transcrib/Note_trans_Convert_female_lseh-Wo_ben_shi-Qiong_lin_yan-qm-2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr></tbody></table>
+
+<h3>Visualizing f0 in Generated Singing</h3>
+        <p>f0 of the original singing and that of the reconstruction generation are compared to demonstrate the capability of the proposed system to generate singing with expressiveness.</p>
+<img src="Peking_Opera_Synthesis-2020/f0_compare_recon-1.png" alt="reconstruction">
+        <img src="Peking_Opera_Synthesis-2020/f0_compare_recon-2.png" alt="reconstruction">
+        <img src="Peking_Opera_Synthesis-2020/f0_compare_recon-3.png" alt="reconstruction">
+<!--<img src="ISMIR2019-audio-sample/image/f0_compare_recon.png" alt="reconstruction">-->
+        <p>f0 of singing generated by Peking opera score input along with the score note input are shown here to demonstrate the capability of the proposed system to generate singing with expressiveness.</p>
+                <img src="Peking_Opera_Synthesis-2020/f0_score_input.png" alt="score_input">
+    </main>
+    </div>
+
+</body>
+</html>
