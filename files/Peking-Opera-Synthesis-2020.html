@@ -39,7 +39,7 @@
 
 <h2 id="methods">How it works?</h2>
         <ul>
-  <li>A <b>phoneme</b> encoder first encode contextual phoneme features.</li>
+  <li>A <b>phoneme encoder</b> first encode contextual phoneme features.</li>
   <li>Then <b>alignment model</b> is used to add note information as well as singer identity embedding and align all feature sequence with the output frame.</li>
   <li>In training, phoneme duration is given by dataset annotation, while in inference, it is predicted by a duration model.</li>
   <li><b>Auto-regressive decoder</b> is used to generate <b>spectrogram</b>.</li>
