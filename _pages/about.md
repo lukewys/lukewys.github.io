@@ -12,24 +12,23 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 # Bio
 
-4th year undergraduate student advised by [Shengchen Li]( https://shengchenli.github.io/ ) from Beijing University of Posts and Telecommunications, School of Automation.
+1st year graduate student of computer science in University of Montreal and Quebec Artificial Intelligence Institute (MILA) advised by [Prof. Aaron Courville](https://mila.quebec/en/person/aaron-courville/) and [Dr. Chengzhi Anna Huang](https://research.google/people/105787/).
 
-Currently working on expressive singing synthesis, specifically generating expressive Peking opera singing.
-
-Previous working (and will be working if possible) on controllable automatic music composition.
+Currently working on symbolic music generation, multi-modality learning.
 
 # [Publications]( https://lukewys.github.io/publications/ )
 
-- (Submitted to ICASSP 2020) **Yusong Wu**, Shengchen Li, Chengzhu Yu, Heng Lu, Chao Weng, Liqiang Zhang, Dong Yu (2020). "[Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network]( https://lukewys.github.io/files/Peking-Opera-Synthesis-2020.html )"  Submitted to *45th International Conference on Acoustics, Speech, and Signal Processing*  (ICASSP 2020)
-- (Submitted to ICASSP 2020) Liqiang Zhang, Chengzhu Yu, Heng Lu, Chao Weng, **Yusong Wu**, Xiang Xie, Zijin Li, Dong Yu (2020) "[Learning Singing From Speech]( https://tencent-ailab.github.io/learning_singing_from_speech/ )" Submitted to *45th International Conference on Acoustics, Speech, and Signal Processing*  (ICASSP 2020)
--  **Yusong Wu**, Shengchen Li (2019). "[ Guqin Dataset: A symbolic music dataset of Chinese Guqin collection ](https://lukewys.github.io/publications/CSMT2019) " *Proceedings of China Conference on Sound and Music Technology (CSMT 2019)*. 
--  **Yusong Wu**, Shengchen Li (2019). "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" *14th International Symposium on Computer Music Multidisciplinary Research (CMMR 2019)*. 
+- **Yusong Wu**, Kun Chen, Ziyue Wang, Xuan Zhang, Fudong Nian, Xi Shao, Shengchen Li  (2020). *Audio Captioning Based on Transformer and Pre-Training for 2020 DCASE Audio Captioning Challenge.* Technical Report, DCASE2020 Challenge.
+- **Yusong Wu**, Shengchen Li, Chenzhu Yu, Heng Lu, Chao Weng, Dong Yu (2020). *Peking Opera Synthesis via Duration Informed Attention Network.* INTERSPEECH 2020
+- Liqiang Zhang, Chengzhu Yu, Heng Lu, Chao Weng, **Yusong Wu**, Xiang Xie, Zijin Li, Dong Yu  (2020). *DurIAN-SC: Duration Informed Attention Network based Singing Voice Conversion System*. INTERSPEECH 2020
+-  **Yusong Wu**, Shengchen Li (2019). [ Guqin Dataset: A symbolic music dataset of Chinese Guqin collection ](https://lukewys.github.io/publications/CSMT2019). *Proceedings of China Conference on Sound and Music Technology (CSMT 2019)*. 
+-  **Yusong Wu**, Shengchen Li (2019). [Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019). *14th International Symposium on Computer Music Multidisciplinary Research (CMMR 2019)*. 
 
 # Research interests
 
 - Automatic symbolic music composition
-- Expressive singing synthesis
-- Reinforcement learning on game theory and playing games
+- Multi-modality learning
+- Singing synthesis / Audio generation
 
 # Skills
 
@@ -45,6 +44,10 @@ Previous working (and will be working if possible) on controllable automatic mus
 My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 # News
+
+26th July: Paper [Peking Opera Synthesis via Duration Informed Attention Network](https://arxiv.org/abs/2008.03009) and [DurIAN-SC: Duration Informed Attention Network based Singing Voice Conversion System](https://arxiv.org/abs/2008.03009) accepted by INTERSPEECH 2020.
+
+1st July: won 2nd Place in DCASE 2020 Challenge Task 6: [Automatic Audio Captioning](http://dcase.community/challenge2020/task-automatic-audio-captioning).
 
 8th November 2019: Presented the late-breaking/demo poster "[Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)" on ISMIR 2019.
 
