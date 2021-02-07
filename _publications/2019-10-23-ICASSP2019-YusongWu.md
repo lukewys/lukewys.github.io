@@ -10,13 +10,13 @@ citation: 'Yusong Wu, Shengchen Li, Chengzhu Yu, Heng Lu, Chao Weng, Liqiang Zha
 ---
 A singing synthesis model which generates singing voice of Peking Opera from note and phoneme sequence where pitch, dynamics and timbre are jointly sampled.
 
-[Details and Audio Sample](https://lukewys.github.io/files/ISMIR2019-audio-sample.html)
+[Details and Audio Sample](https://lukewys.github.io/files/Peking-Opera-Synthesis-2020.html)
 
 
 
 
 
-[Download paper here](https://lukewys.github.io/files/ICASSP_2020_YusongWu.pdf)
+[Download paper here](https://lukewys.github.io/files/INTERSPEECH_2020_YusongWu_Final_revised.pdf)
 
 
 

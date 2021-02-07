@@ -51,7 +51,7 @@ My blog on [Zhihu](https://www.zhihu.com/people/wu-yu-song-52/posts).
 
 8th November 2019: Presented the late-breaking/demo poster "[Highly Expressive Peking Opera Synthesis with Durian System](https://lukewys.github.io/publications/ISMIR2019)" on ISMIR 2019.
 
-21st October 2019: Submitted a paper "Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network" to ICASSP 2020 ( 45th International Conference on Acoustics, Speech, and Signal Processing). Please check out for [audio samples](https://lukewys.github.io/files/ISMIR2019-audio-sample.html )
+21st October 2019: Submitted a paper "Synthesising Expressiveness in Peking Opera via Duration Informed Attention Network" to ICASSP 2020 ( 45th International Conference on Acoustics, Speech, and Signal Processing). Please check out for [audio samples](https://lukewys.github.io/files/Peking-Opera-Synthesis-2020.html )
 
 16th October 2019: Presented poster presentation "[Distinguishing Chinese Guqin and Western Baroque pieces based on statistical model analysis of melodies](https://lukewys.github.io/publications/CMMR2019)" on CMMR 2019.
 
