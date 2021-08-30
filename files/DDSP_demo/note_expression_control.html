@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.55.5"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>&#34;Molto Vibrato: Note-based Expressive Control&#34; </title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header role="banner">
+
+
+    </header>
+
+
+    <main role="main">
+
+        <a href="../DDSP_project_demo.html"><h1>Back to Main Page</h1></a>
+
+        <h1 id="title">Note Expression Control</h1>
+
+        <p>In this section we present qualitative results and quantitative results showing the effect of the note
+            expression control parameters.</p>
+
+        <p>In the proposed system, 7 note expression controls are designed and extracted:</p>
+        <p>amplitude_mean: 0-1, extracted by taken mean dB scale amplitude over a note. Controls overall volume of a
+            note.</p>
+        <p>amplitude_std: 0-0.2, extracted by taken standard deviation of the amplitude over a note.
+            Controls the extent of the volume changing in a note (crescendo & decrescendo or not).</p>
+        <p>amplitudes_max_pos: 0-1, extracted by calculating the relative position of maximum amplitude in a note.
+            Controls the volume changing in a note (crescendo & decrescendo, together with amplitude_std).</p>
+
+        <p>attack_level: 0-0.4, extracted by calculating the mean of noise magnitude over first 10 frames of a note.
+            Controls the extent of note attack (strong or soft).</p>
+
+        <p>brightness: 0-0.4, extracted by calculating the mean of centroid of harmonic distribution over a note.
+            Controls the timbre of a note.</p>
+
+        <p>vibrato rate: 0, 3-9, extracted by applying fft on f0 contour over a note.
+            Controls the rate of the vibrato of a note.</p>
+
+        <p>vibrato extend: 0, 3-9, extracted by applying fft on f0 contour over a note.
+            Controls the extend of the vibrato of a note.</p>
+
+        <h2>Qualitative Control Effect</h2>
+
+        <p>Here we present the effect of note expression control by change the expression note controls
+            and show the spectrogram and synthesizer parameters of the results.</p>
+
+
+        <h3>X axis: amplitude_amplitude_mean, Y axis: amplitude_std</h3>
+        <p>Spectrogram</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/grid_amplitude_mean_amplitude_std_spec.png"
+             alt="">
+        <p>Amplitudes</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/grid_amplitude_mean_amplitude_std_amp.png"
+             alt="">
+
+        <h3>X axis: vibrato_extend, Y axis: vibrato_rate</h3>
+        <p>Spectrogram</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/grid_vibrato_rate_vibrato_extend_spec.png"
+             alt="">
+        <p>F0</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/grid_vibrato_rate_vibrato_extend_f0.png"
+             alt="">
+
+        <h3>amplitude_max_pos</h3>
+        <p>Spectrogram</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/amplitudes_max_pos_spec.png"
+             alt="">
+        <p>Amplitudes</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/amplitudes_max_pos_amp.png"
+             alt="">
+
+        <h3>Brightness</h3>
+        <p>Spectrogram</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/brightness_spec.png"
+             alt="">
+        <p>Centroids of Harmonic Distribution</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/brightness_harmonic_centroid.png"
+             alt="">
+
+        <h3>Attack Level</h3>
+        <p>Spectrogram</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/attack_level_spec.png"
+             alt="">
+        <p>Noise Magnitude</p>
+        <img width="60%" height="60%" src="samples/urmp_violin_grid_control/attack_level_noise.png"
+             alt="">
+
+        <h2>Quantitative Control Effect</h2>
+
+        <p>Here, we present quantitative evaluation results of the note expression controls.
+            We take each sample in the test-set,
+            change one of its note expression control and extract value of the changed note expression control.
+            That is, we compare the effect of the note expression control in control space.</p>
+
+        <p>Conclusion: the vibrato_rate control cannot control the vibrato rate effectively.
+            Other controls are more or less effective. The amplitude_max_pos control are usually the least effective.
+            The effectiveness of controls (i.e. whether the results correlate with control input) varies with different
+            instrument.
+            For example, instruments with little vibrato will have a hard time controlling the extend of the
+            vibrato.</p>
+
+        <h3>Violin</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/violin.png"
+             alt="">
+
+        <h3>Viola</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/viola.png"
+             alt="">
+
+        <h3>Cello</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/cello.png"
+             alt="">
+
+        <h3>Double Bass</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/double%20bass.png"
+             alt="">
+
+        <h3>Flute</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/flute.png"
+             alt="">
+
+        <h3>Oboe</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/oboe.png"
+             alt="">
+
+        <h3>Clarinet</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/clarinet.png"
+             alt="">
+
+        <h3>Saxophone</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/saxophone.png"
+             alt="">
+
+        <h3>Bassoon</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/bassoon.png"
+             alt="">
+
+        <h3>Trumpet</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/trumpet.png"
+             alt="">
+
+        <h3>French Horn</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/horn.png"
+             alt="">
+
+        <h3>Trombone</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/trombone.png"
+             alt="">
+
+        <h3>Tuba</h3>
+        <img width="60%" height="60%" src="samples/control_metric_plot/tuba.png"
+             alt="">
+
+    </main>
+</div>
+</body>
+</html>
