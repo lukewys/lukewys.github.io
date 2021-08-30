@@ -211,6 +211,39 @@
         <table>
             <thead>
             <tr>
+                <th style="text-align: center">Flute - Original</th>
+                <th style="text-align: center">Flute - Proposed Method</th>
+                <th style="text-align: center">Flute - Fluidsynth</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_ref.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_pred.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_fluidsynth.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+            <tr>
                 <th style="text-align: center">Saxophone - Original</th>
                 <th style="text-align: center">Saxophone - Proposed Method</th>
                 <th style="text-align: center">Saxophone - Fluidsynth</th>
@@ -453,32 +486,35 @@
             </tbody>
         </table>
 
-        <!--        <h3>(Maybe) RMSE comparison of the Synthesizer Parameters</h3>-->
-        <!--        <p>Between our method and Chris's</p>-->
+        <h3>RMSE and Spectral Loss of Test-set Synthesis</h3>
+        <p>Below we present the Root Mean Square Error (RMSE) and spectral loss of the test-set MIDI synthesis comparing
+            to the ground-truth.
+            The number reported under each note expression control is the note-wise RMSE of the ground-truth and the
+            output of note expression generator.
+            The spectral loss reported are calculated between the final synthesized audio and the ground-truth
+            audio.</p>
 
-        <a href="DDSP_demo/note_expression_control.html"><h2 id="note-expression-control">Note Expression Control</h2></a>
+        <img src="DDSP_demo/pics/test_set_loss.png" alt="Test Set Loss">
+
+        <a href="DDSP_demo/note_expression_control.html"><h2 id="note-expression-control">Note Expression Control</h2>
+        </a>
         <p>In this section we present qualitative results and quantitative results showing the effect of the note
             expression control parameters.</p>
         <a href="DDSP_demo/note_expression_control.html"><p>Please check here for details.</p></a>
 
 
         <a href="DDSP_demo/tone_transfer.html"><h2 id="note-base-tone-transfer">Note-base Tone Transfer</h2></a>
+        <p>This section presents audio samples of note-base tone transfer results compared with
+            <a href="https://storage.googleapis.com/ddsp/index.html">original DDSP timbre transfer results</a>.</p>
         <p>The proposed system synthesize audio based on note-wise features.
             Thus, note transfer can be done by first extracting note boundaries and control parameters from source
             audio, and synthesize audio using target instrument.
             To synthesize audio in the target instrument,
             each extracted control parameter is shifted by the mean of the control parameters in the dataset of the
-            target instrument.</p>
+            target instrument. Comparing to original DDSP tone transfer which use frame-wise acoustic features,
+            the proposed method can generate more idiomatic and realistic tone transfer results.</p>
 
 
-        <p>This section presents audio samples of note-base tone transfer results compared with
-            <a href="https://storage.googleapis.com/ddsp/index.html">original DDSP timbre transfer results</a>. Comparing
-            to original DDSP tone transfer which use frame-wise acoustic features,
-            the proposed method can generate more idiomatic and realistic tone transfer results.
-            Please in note in original DDSP note transfer, some samples fails to generate consistent volume
-            in a note and fails to generate the attack of the note.
-            (Some tone transfer also shifted the pitch of the source audio to match the pitch range of target
-            instrument)</p>
         <a href="DDSP_demo/tone_transfer.html"><p>Please check here for details.</p></a>
 
 
