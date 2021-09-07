@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.55.5"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>&#34;Molto Vibrato: Note-based Expressive Control&#34; </title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header role="banner">
+
+
+    </header>
+
+
+    <main role="main">
+
+        <a href="../DDSP_project_demo.html"><h1>Back to Main Page</h1></a>
+
+        <h1 id="title">Ablation Test</h1>
+
+
+        <p>Here we present the ablation test result to simulate the synthesis result if there is only DDSP synthesizer
+            available, or there are only DDSP synthesizer and synthesizer parameters generator available.</p>
+
+        <p>The following samples labelled "DDSP-mean" are synthesized only using DDSP synthesizer, giving f0 contour
+            directly transferred from MIDI sequence, and loudness sequence filled with the average note-on loudness of
+            the
+            instrument.</p>
+
+        <p>The following samples labelled "Note-mean" are synthesized using synthesizer parameters generator.
+            The note expression controls are filled with average value of the instrument across training set.</p>
+
+        <h2>MIDI Synthesis</h2>
+
+                <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">DDSP-mean</th>
+                <th style="text-align: center">Note-mean</th>
+                <th style="text-align: center">Proposed Model</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/phantom_ddsp_ori.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/phantom_note_mean.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/phantom.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+        <p>Phantom - DDSP-mean</p>
+        <img width="100%" height="100%" src="samples/midi_synthesis/phantom_ddsp_mean.png"
+             alt="Violin to Guitar">
+
+        <p>Phantom - Note-mean</p>
+        <img width="100%" height="100%" src="samples/midi_synthesis/phantom_note_mean.png"
+             alt="Violin to Guitar">
+
+        <p>Phantom - Proposed Model</p>
+        <img width="100%" height="100%" src="samples/midi_synthesis/phantom_pred.png"
+             alt="Violin to Guitar">
+
+        <h2>Test-set Synthesis</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Ground-truth</th>
+                <th style="text-align: center">DDSP-mean</th>
+                <th style="text-align: center">Note-mean</th>
+                <th style="text-align: center">Proposed Model</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/test_set_synthesis/violin_0_ref.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/test_set_ablation_test/violin_0_ddsp_ori.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/test_set_ablation_test/violin_0_note_mean.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/test_set_synthesis/violin_0_pred.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.55.5"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>&#34;Molto Vibrato: Note-based Expressive Control&#34; </title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header role="banner">
+
+
+    </header>
+
+
+    <main role="main">
+
+        <a href="../DDSP_project_demo.html"><h1>Back to Main Page</h1></a>
+
+        <h1 id="title">Molto Vibrato: Note-based Expressive Control</h1>
+
+
+        <p>Realistic Score-to-audio instrument performance synthesis is a challenge task, especially when expressive
+            performance
+            expressed in subtle changes pitch, dynamic etc. which makes performance natural.
+            In this work, a controllable neural MIDI synthesis system is proposed.
+            Unlike previous works which learn a mapping directly from MIDI to acoustic features,
+            the proposed system first generates expression control parameters for each note,
+            then predicts frame-wise synthesizer parameters and synthesize audio using DDSP module.
+            By designing the system in a hierarchical and objective-oriented manner,
+            the proposed system can generate realistic performance audio,
+            while enabling post-hoc user edit of the synthesis result.
+        </p>
+
+        <img src="pics/model_diagram.png" alt="Model Architecture">
+
+        <p>By first automatically synthesize a performance then interactively edit by human expert,
+            the proposed model is capable of generating realistic performance piece from only MIDI score:</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Phantom</th>
+                <th style="text-align: center">Tango Por una Cabeza</th>
+                <th style="text-align: center">Viva La Vida</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/phantom_adjusted.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/Tango_Por_una_Cabeza-Violin_adjusted.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/viva_la_vida_adjusted.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>Without human editing, the model can also automatically synthesize good performance in various inetrument
+            with only MIDI score as input:</p>
+
+        <p>Not only the model generates realistic expression in performance, the model also synthesize other sounds of
+            real human playing an instrument, which makes the synthesis more realistic.
+            For example, please notice in "Isabella's Lullaby - Flute", one can hear the breathing sound being
+            synthesized.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Isabella's Lullaby - Flute</th>
+                <th style="text-align: center">Cannon in D - Cello</th>
+                <th style="text-align: center">La vie En Rose - Trumpet</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/Isabellas_Lullaby_Flute.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/Cello_solo_Canon_In_D.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/la_vie_en_rose.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>The proposed system can also synthesize realistic ensemble performance in a wide range of instruments:</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Bach Quartet - String Set</th>
+                <th style="text-align: center">Bach Quartet - Brasswind Set</th>
+                <th style="text-align: center">Bach Quartet - Woodwind Set</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/bach_midi_synthesis/bwv227.1_string_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/bach_midi_synthesis/bwv227.1_brasswind_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/bach_midi_synthesis/bwv227.1_woodwind_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--        <table>-->
+        <!--            <thead>-->
+        <!--            <tr>-->
+        <!--                <th style="text-align: center">Thais Meditation - Violin</th>-->
+        <!--                <th style="text-align: center">Beauty and the Beast - Flute</th>-->
+        <!--                <th style="text-align: center">Game of Thrones - Cello</th>-->
+        <!--            </tr>-->
+        <!--            </thead>-->
+        <!--            <tbody>-->
+        <!--            <tr>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/Thais_Meditation-Violin-1.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/Beauty_and_the_beast-Flute.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/Game_of_Thrones_Solo_Cello.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--            </tr>-->
+        <!--            </tbody>-->
+        <!--        </table>-->
+
+        <!--        <table>-->
+        <!--            <thead>-->
+        <!--            <tr>-->
+        <!--                <th style="text-align: center">Phantom - Automatic Generation</th>-->
+        <!--                <th style="text-align: center">Tango Por una Cabeza - Automatic Generation</th>-->
+        <!--                <th style="text-align: center">Viva La Vida - Automatic Generation</th>-->
+
+        <!--            </tr>-->
+        <!--            </thead>-->
+        <!--            <tbody>-->
+        <!--            <tr>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/phantom.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/Tango_Por_una_Cabeza-Violin.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--                <td style="text-align: center">-->
+        <!--                    <audio controls="controls">-->
+        <!--                        <source src="samples/midi_synthesis/viva_la_vida.wav" autoplay/>-->
+        <!--                        Your browser does not support the audio element.-->
+        <!--                    </audio>-->
+        <!--                </td>-->
+        <!--            </tr>-->
+        <!--            </tbody>-->
+        <!--        </table>-->
+
+        <p>The scalar note expression controls in the proposed system corresponds to different aspect of the
+            performance. Manually adjust the note expression controls can enable wide range of controls on expression
+            and articulations of the performance.
+        </p>
+        <p>To show the capability of our model on manually adjusting expressive performance,
+            here we manually edit the note expression controls of a piece based on model prediction
+            to make the violin performance into a totally different interpretation.
+            In the edited version, the violin is playing all note in staccato.</p>
+
+        <p>**Staccato: performed with each note sharply detached or separated from the others.</p>
+
+
+        <p>Tango Por una Cabeza, Violin - Automatic Generation</p>
+        <img src="samples/midi_synthesis/tango_ori.png"
+             alt="Tango Por una Cabeza, Violin - Automatic Generation">
+
+        <p>Tango Por una Cabeza, Violin - Automatic Generation + All Staccato</p>
+        <img src="samples/midi_synthesis/tango_all_staccato.png"
+             alt="Tango Por una Cabeza, Violin - Automatic Generation + All Staccato">
+
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation</th>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation + All Staccato</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/Tango_Por_una_Cabeza-Violin.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="samples/midi_synthesis/Tango_Por_una_Cabeza-Violin_all_staccato.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="../DDSP_project_demo.html"><h1>Click here for more samples and details</h1></a>
+
+    </main>
+</div>
+</body>
+</html>

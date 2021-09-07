@@ -36,11 +36,187 @@
         <a href="#test-set-synthesis"><p> - Test-set Synthesis</p></a>
         <a href="#violin-midi-synthesis"><p> - Violin Performance Synthesis</p></a>
         <a href="#bach-quartet"><p> - Bach Quartet Synthesis</p></a>
+        <a href="DDSP_demo/ablation_test.html"><p> - Ablation Test</p></a>
         <a href="#loss-table"><p> - RMSE and Spectral Loss of Test-set Synthesis</p></a>
         <a href="DDSP_demo/note_expression_control.html"><p>Note Expression Control</p></a>
         <a href="DDSP_demo/tone_transfer.html"><p>Note-base Tone Transfer</p></a>
 
+        <a href="DDSP_demo/gan_improvement.html"><p>Extra: Improvement of GAN in model synthesis performance</p></a>
+
+        <h2 id="new">Updates:</h2>
+        <a href="DDSP_demo/hero_example.html"><p>Hero Examples!</p></a>
+        <a href="#violin-midi-synthesis"><p>New MIDI Synthesis Results!</p></a>
+        <a href="#bach-quartet"><p>Updated Bach Quartet Synthesis!</p></a>
+        <a href="DDSP_demo/ablation_test.html"><p>Ablation Test</p></a>
+        <a href="DDSP_demo/note_expression_control.html"><p>New expression control results and pearson correlation
+            reports</p></a>
+        <a href="DDSP_demo/gan_improvement.html"><p>Improvement of GAN in model synthesis performance</p></a>
+
+        <p>(below) Manual synthesis adjustment, and singing tone transfer</p>
+
+        <h2 id="synthesis-adjustment">Manual Synthesis Adjustment</h2>
+
+        <p>For the samples below, the note expression generator first gives the prediction of the note expression
+            controls,
+            a human instrument player is then adjusting and editing the note expression controls predicted earlier.
+            The final audios are synthesized by model after rounds of edit.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Phantom, Violin - Automatic Generation + Human Edit</th>
+                <th style="text-align: center">Phantom, Violin - Automatic Generation</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/phantom_adjusted.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/phantom.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+            </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Viva La Vida, Violin - Automatic Generation + Human Edit</th>
+                <th style="text-align: center">Viva La Vida, Violin - Automatic Generation</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/viva_la_vida_adjusted.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/viva_la_vida.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+            </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation + Human Edit</th>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Tango_Por_una_Cabeza-Violin_adjusted.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Tango_Por_una_Cabeza-Violin.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2 id="interpretation-adjust">Changing Performance Interpretation</h2>
+        <p>To show the capability of our model on manually adjusting expressive performance,
+            here we manually edit the note expression controls of a piece based on model prediction
+            to make the violin playing all staccato note.</p>
+
+
+        <p>Tango Por una Cabeza, Violin - Automatic Generation</p>
+        <img src="DDSP_demo/samples/midi_synthesis/tango_ori.png"
+             alt="Tango Por una Cabeza, Violin - Automatic Generation">
+
+        <p>Tango Por una Cabeza, Violin - Automatic Generation + All Staccato</p>
+        <img src="DDSP_demo/samples/midi_synthesis/tango_all_staccato.png"
+             alt="Tango Por una Cabeza, Violin - Automatic Generation + All Staccato">
+
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation</th>
+                <th style="text-align: center">Tango Por una Cabeza, Violin - Automatic Generation + All Staccato</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Tango_Por_una_Cabeza-Violin.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Tango_Por_una_Cabeza-Violin_all_staccato.wav"
+                                autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <h2 id="singing-transfer">Singing Tone Transfer</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Original Singing</th>
+                <th style="text-align: center">DDSP Transfer</th>
+                <th style="text-align: center">Ours Transfer</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/singing_tone_transfer/singing.mp3" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/singing_tone_transfer/DDSP_transfer.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/singing_tone_transfer/Ours_transfer.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
         <h2 id="abstract">Abstract & Introduction</h2>
+
 
         <!--超链接：paper的地址-->
         <a href="">Paper</a>
@@ -90,19 +266,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/violin_0_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/violin_0_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/violin_0_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/violin_0_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/violin_0_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/violin_0_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -123,19 +299,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/cello_1_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/cello_1_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/cello_1_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/cello_1_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/cello_1_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/cello_1_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -156,19 +332,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/trumpet_0_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/trumpet_0_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/trumpet_0_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/trumpet_0_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/trumpet_0_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/trumpet_0_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -189,19 +365,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/oboe_0_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/oboe_0_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/oboe_0_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/oboe_0_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/oboe_0_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/oboe_0_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -222,19 +398,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/flute_1_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/flute_1_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/flute_1_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/flute_1_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -255,19 +431,19 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/saxophone_0_ref.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/saxophone_0_ref.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/saxophone_0_pred.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/saxophone_0_pred.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/saxophone_0_fluidsynth.wav" autoplay/>
+                        <source src="DDSP_demo/samples/test_set_synthesis/saxophone_0_fluidsynth.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -275,7 +451,40 @@
             </tbody>
         </table>
 
-        <h3 id="violin-midi-synthesis">Violin Performance Synthesis with Music Score input</h3>
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Clarinet - Original</th>
+                <th style="text-align: center">Clarinet - Proposed Method</th>
+                <th style="text-align: center">Clarinet - Fluidsynth</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/test_set_synthesis/clarinet_0_ref.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/test_set_synthesis/clarinet_0_pred.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/test_set_synthesis/clarinet_0_fluidsynth.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3 id="violin-midi-synthesis">Performance Synthesis with Music Score input</h3>
 
         <p> The instrument performance synthesized with MIDI input obtained from internet which never appears in the
             dataset.</p>
@@ -283,21 +492,76 @@
         <table>
             <thead>
             <tr>
-                <th style="text-align: center">BMV 1004 - Violin</th>
-                <th style="text-align: center">BMV 1007 - Violin</th>
+                <th style="text-align: center">Phantom - Violin</th>
+                <th style="text-align: center">Viva La Vida - Violin</th>
+                <th style="text-align: center">Tango Por una Cabeza - Violin</th>
+                <th style="text-align: center">La Vie En Rose - Trumpet</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/bmv_1004_violin.wav" autoplay/>
+                        <source src="DDSP_demo/samples/midi_synthesis/phantom.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/MIDI_Synthesis/bmv_1007_violin.wav" autoplay/>
+                        <source src="DDSP_demo/samples/midi_synthesis/viva_la_vida.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Tango_Por_una_Cabeza-Violin.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/la_vie_en_rose.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>Please notice in "Isabella's Lullaby - Flute", you can hear the breathing sound being synthesized.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Beauty and the Beast - Flute</th>
+                <th style="text-align: center">Isabella's Lullaby - Flute</th>
+                <th style="text-align: center">Game of Thrones - Cello</th>
+                <th style="text-align: center">Cannon in D - Cello</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Beauty_and_the_beast-Flute.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Isabellas_Lullaby_Flute.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Game_of_Thrones_Solo_Cello.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/midi_synthesis/Cello_solo_Canon_In_D.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -307,8 +571,7 @@
 
         <h3 id="bach-quartet">Bach Quartet Synthesis</h3>
         <p> The quartet performance synthesized with MIDI input from <b>Bach Chorales</b> using four instruments.
-            The volume of four parts are mixed as: Soprano 100%, Alto 100%, Tenor 100%, and Bass 100% (will change
-            later).
+            The volume of four parts are mixed as: Soprano +2dB, Alto +2dB, Tenor -1dB, and Bass -1dB.
             Here, we present three types of instrument ensemble.</p>
 
         <p>String Set</p>
@@ -322,7 +585,7 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/string_set/mix.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_string_set/mix.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -334,7 +597,7 @@
             <thead>
             <tr>
                 <th style="text-align: center">Soprano - Violin</th>
-                <th style="text-align: center">Alto - Viola</th>
+                <th style="text-align: center">Alto - Violin</th>
                 <th style="text-align: center">Tenor - Cello</th>
                 <th style="text-align: center">Bass - Double Bass</th>
             </tr>
@@ -343,25 +606,25 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/string_set/violin.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_string_set/Soprano.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/string_set/viola.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_string_set/Alto.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/string_set/cello.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_string_set/Tenor.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/string_set/double%20bass.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_string_set/Bass.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -381,7 +644,7 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/brasswind_set/mix.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_brasswind_set/mix.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -402,25 +665,26 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/brasswind_set/trumpet.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_brasswind_set/Soprano.wav"
+                                autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/brasswind_set/horn.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_brasswind_set/Alto.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/brasswind_set/trombone.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_brasswind_set/Tenor.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/brasswind_set/tuba.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_brasswind_set/Bass.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -440,7 +704,7 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/woodwind_set/mix.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_woodwind_set/mix.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
@@ -461,31 +725,73 @@
             <tr>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/woodwind_set/flute.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_woodwind_set/Soprano.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/woodwind_set/oboe.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_woodwind_set/Alto.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/woodwind_set/clarinet.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_woodwind_set/Tenor.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
                 <td style="text-align: center">
                     <audio controls="controls">
-                        <source src="DDSP_demo/samples/bach_quartet/woodwind_set/bassoon.wav" autoplay/>
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv227.1_woodwind_set/Bass.wav" autoplay/>
                         Your browser does not support the audio element.
                     </audio>
                 </td>
             </tr>
             </tbody>
         </table>
+
+        <p>More Bach Quartet</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">BWV165.6 - String Set</th>
+                <th style="text-align: center">BWV178.7 - String Set</th>
+                <th style="text-align: center">BWV180.7 - String Set</th>
+                <th style="text-align: center">BWV245.14 - String Set</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv165.6_string_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv178.7_string_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv180.7_string_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls">
+                        <source src="DDSP_demo/samples/bach_midi_synthesis/bwv245.14_string_set/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
 
         <h3 id="loss-table">RMSE and Spectral Loss of Test-set Synthesis</h3>
         <p>Below we present the Root Mean Square Error (RMSE) and spectral loss of the test-set MIDI synthesis comparing
