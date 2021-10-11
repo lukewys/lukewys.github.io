@@ -12,7 +12,7 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 # Bio
 
-1st year graduate student of computer science in University of Montreal and Quebec Artificial Intelligence Institute (MILA) advised by [Prof. Aaron Courville](https://mila.quebec/en/person/aaron-courville/) and [Dr. Chengzhi Anna Huang](https://research.google/people/105787/).
+2nd year graduate student of computer science in University of Montreal and Quebec Artificial Intelligence Institute (MILA) advised by [Prof. Aaron Courville](https://mila.quebec/en/person/aaron-courville/) and [Dr. Chengzhi Anna Huang](https://research.google/people/105787/).
 
 Currently working on symbolic music generation, multi-modality learning.
 
