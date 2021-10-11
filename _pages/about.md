@@ -16,8 +16,6 @@ This is Yusong Wu's home page. You can check out my [CV](https://lukewys.github.
 
 Currently working on symbolic music generation, multi-modality learning.
 
-[DDSP Demo](https://lukewys.github.io/files/DDSP_project_demo.html)
-
 # [Publications]( https://lukewys.github.io/publications/ )
 
 - **Yusong Wu**, Kun Chen, Ziyue Wang, Xuan Zhang, Fudong Nian, Xi Shao, Shengchen Li  (2020). *Audio Captioning Based on Transformer and Pre-Training for 2020 DCASE Audio Captioning Challenge.* Technical Report, DCASE2020 Challenge.
