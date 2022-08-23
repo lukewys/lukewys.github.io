@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.55.5"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/github.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>&#34;CocoChorales Dataset&#34; </title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header role="banner">
+
+
+    </header>
+
+
+    <main role="main">
+
+        <h1 id="title">CocoChorales Dataset</h1>
+
+        <h2 id="contents">Contents</h2>
+
+        <a href="#overview"><p>Overview</p></a>
+        <a href="#data-example"><p>Data Examples</p></a>
+        <a href="stats.html"><p>Statistics</p></a>
+        <a href="#readme"><p>Data Format</p></a>
+
+
+        <h2 id="overview">Overview</h2>
+
+        <p>
+            We pair a generative model of notes (Coconet) with a structured synthesis model (MIDI-DDSP) for producing a
+            large-scale open-source dataset (<b>CocoChorales</b>) of chorale audio with rich annotations including
+            mixes, stems, MIDI, performance attributes, and fine-grained synthesis parameters.
+        </p>
+        <img width="90%" height="90%" src="assets/figs/hero_diagram.png" class="center" alt="Overview">
+
+        <p>
+            CocoChorales consists of 240,000 pieces, totaling 1411 hours of mixture data. The CocoChorales is one or two
+            magnitudes larger than current MIR datasets. CocoChorales consists of four ensembles in equal number of pieces:
+            string, brass, woodwind, and random.
+        </p>
+
+        <img width="90%" height="90%" src="assets/figs/dataset_compare.png" class="center"
+             alt="Dataset Size Comparison">
+
+
+        <h2 id="data-example">Data Examples</h2>
+        <p>
+            Here we show one example for each ensemble. The data for examples shown here are available for download.
+        </p>
+
+        <h3>String (string_track000280)</h3>
+        <h4>MIDI</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/string_track000280/pianoroll.png"
+             class="center"
+             alt="">
+
+        <h4>Audio</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Mix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/string_track000280/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/string_track000280/spec_mix.png"
+             class="center"
+             alt="">
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Soprano - Violin</th>
+                <th style="text-align: center">Alto - Violin</th>
+                <th style="text-align: center">Tenor - Cello</th>
+                <th style="text-align: center">Bass - Double Bass</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/string_track000280/1_violin.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/string_track000280/2_violin.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/string_track000280/3_viola.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/string_track000280/4_cello.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <img width="100%" height="100%" src="assets/sample_examples/assets/string_track000280/spec_stem.png"
+             class="center"
+             alt="">
+
+        <h4>Synthesis Parameters (Soprano)</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/string_track000280/synth_params.png"
+             class="center"
+             alt="">
+
+        <h4>Note Expressions (Soprano): <a href="assets/sample_examples/assets/string_track000280/0_violin.csv">download
+            CSV</a></h4>
+
+        <h4>Metadata: <a href="assets/sample_examples/assets/string_track000280/string_track000280.yaml">download
+            YAML</a></h4>
+
+        <h4><a href="assets/sample_examples/pieces/string_track000280.zip">Download all data of the piece</a></h4>
+
+        <h3>Brass (brass_track001222)</h3>
+        <h4>MIDI</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/brass_track001222/pianoroll.png"
+             class="center"
+             alt="">
+        <h4>Audio</h4>
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Mix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/brass_track001222/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/brass_track001222/spec_mix.png"
+             class="center"
+             alt="">
+
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Soprano - Trumpet</th>
+                <th style="text-align: center">Alto - French Horn</th>
+                <th style="text-align: center">Tenor - Trombone</th>
+                <th style="text-align: center">Bass - Tuba</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/brass_track001222/1_trumpet.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/brass_track001222/2_horn.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/brass_track001222/3_trombone.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/brass_track001222/4_tuba.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <img width="100%" height="100%" src="assets/sample_examples/assets/brass_track001222/spec_stem.png"
+             class="center"
+             alt="">
+
+        <h4>Synthesis Parameters (Soprano)</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/brass_track001222/synth_params.png"
+             class="center"
+             alt="">
+
+        <h4>Note Expressions (Soprano): <a href="assets/sample_examples/assets/brass_track001222/0_trumpet.csv">download
+            CSV</a></h4>
+
+        <h4>Metadata: <a href="assets/sample_examples/assets/brass_track001222/brass_track001222.yaml">download
+            YAML</a></h4>
+
+        <h4><a href="assets/sample_examples/pieces/brass_track001222.zip">Download all data of the piece</a></h4>
+
+        <h3>Woodwind (woodwind_track002020)</h3>
+
+        <h4>MIDI</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/woodwind_track002020/pianoroll.png"
+             class="center"
+             alt="">
+
+        <h4>Audio</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Mix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/woodwind_track002020/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/woodwind_track002020/spec_mix.png"
+             class="center"
+             alt="">
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Soprano - Flute</th>
+                <th style="text-align: center">Alto - Oboe</th>
+                <th style="text-align: center">Tenor - Clarinet</th>
+                <th style="text-align: center">Bass - Bassoon</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/woodwind_track002020/1_flute.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/woodwind_track002020/2_oboe.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/woodwind_track002020/3_clarinet.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/woodwind_track002020/4_bassoon.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <img width="100%" height="100%" src="assets/sample_examples/assets/woodwind_track002020/spec_stem.png"
+             class="center"
+             alt="">
+
+        <h4>Synthesis Parameters (Soprano)</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/woodwind_track002020/synth_params.png"
+             class="center"
+             alt="">
+
+        <h4>Note Expressions (Soprano): <a href="assets/sample_examples/assets/woodwind_track002020/0_flute.csv">download
+            CSV</a></h4>
+
+        <h4>Metadata: <a href="assets/sample_examples/assets/woodwind_track002020/woodwind_track002020.yaml">download
+            YAML</a></h4>
+
+        <h4><a href="assets/sample_examples/pieces/woodwind_track002020.zip">Download all data of the piece</a></h4>
+
+        <h3>Random (random_track002965)</h3>
+
+        <h4>MIDI</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/random_track002965/pianoroll.png"
+             class="center"
+             alt="">
+
+        <h4>Audio</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Mix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/random_track002965/mix.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/random_track002965/spec_mix.png"
+             class="center"
+             alt="">
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">Soprano - Clarinet</th>
+                <th style="text-align: center">Alto - Clarinet</th>
+                <th style="text-align: center">Tenor - Saxophone</th>
+                <th style="text-align: center">Bass - Double Bass</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/random_track002965/1_clarinet.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/random_track002965/2_clarinet.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/random_track002965/3_saxophone.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="text-align: center">
+                    <audio controls="controls" style="width: 240px">
+                        <source src="assets/sample_examples/assets/random_track002965/4_double%20bass.wav" autoplay/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <img width="100%" height="100%" src="assets/sample_examples/assets/random_track002965/spec_stem.png"
+             class="center"
+             alt="">
+
+        <h4>Synthesis Parameters (Soprano)</h4>
+        <img width="100%" height="100%" src="assets/sample_examples/assets/random_track002965/synth_params.png"
+             class="center"
+             alt="">
+
+        <h4>Note Expressions (Soprano): <a href="assets/sample_examples/assets/random_track002965/0_clarinet.csv">download
+            CSV</a></h4>
+
+        <h4>Metadata: <a href="assets/sample_examples/assets/random_track002965/random_track002965.yaml">download
+            YAML</a></h4>
+
+        <h4><a href="assets/sample_examples/pieces/random_track002965.zip">Download all data of the piece</a></h4>
+
+        <h2 id="readme">Data Format</h2>
+        <p>Please check this <a href="assets/sample_examples/README.md">Readme</a> file about the data format and file
+            structure.</p>
+
+<!--        <h2>Open Source Image Attribution</h2>-->
+<!--        <p>The icons used throughout the paper and webpages are used under the Creative Commons license via the Noun-->
+<!--            Project. We gratefully acknowledge the following creators of these images:-->
+<!--            <br>Loop by Vicons Design from NounProject.com-->
+<!--            <br>Plus by scott desmond from NounProject.com-->
+<!--        </p>-->
+
+    </main>
+</div>
+</body>
+</html>
