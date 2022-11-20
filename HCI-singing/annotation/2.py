@@ -20,8 +20,7 @@ But tell me you love me, come back and haunt me
 Oh and I rush to the start
 """
 
-"""
-lyrics_word = {
+lyrics_word="""
     Come 0:00.291
     up 0:00.825
     to 0:01.127
@@ -88,5 +87,52 @@ lyrics_word = {
     a 0:47.000
     science 0:47.372
     apart 0:49.119
-}
+    
+    Nobody 0:52.480
+    said 0:54.000
+    it 0:54.831
+    was 0:55.203
+    easy 0:55.715
+    
+    It's 0:58.939
+    such 0:59.513
+    a 1:00.164
+    shame 1:00.536
+    for 1:01.390
+    us 1:01.824
+    to 1:02.181
+    part 1:02.615
+    
+    Nobody 1:05.526
+    said 1:07.000
+    it 1:08.000
+    was 1:08.357
+    easy 1:08.812
+    
+    No 1:12.000
+    one 1:12.770
+    ever 1:13.286
+    said 1:14.000
+    it 1:14.854
+    would 1:15.285
+    be 1:15.740
+    this 1:16.159
+    hard 1:16.893
+    
+    Oh 1:20.976
+    take 1:21.466
+    me 1:21.813
+    back 1:22.324
+    to 1:22.589
+    the 1:23.039
+    start 1:23.509
 """
+
+# transfer the lyrics to a list and convert time to seconds
+lyrics = lyrics_word.split()
+lyrics = [lyrics[i:i+2] for i in range(0, len(lyrics), 2)]
+for i in range(len(lyrics)):
+    lyrics[i][1] = lyrics[i][1].split(':')
+    lyrics[i][1] = float(lyrics[i][1][0]) * 60 + float(lyrics[i][1][1])
+
+print(lyrics)

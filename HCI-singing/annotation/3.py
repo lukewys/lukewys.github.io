@@ -7,8 +7,7 @@ See how I'll leave with every piece of you
 Don't underestimate the things that I will do
 
 """
-"""
-lyrics_word = {
+lyrics_word="""
     There's 0:00.439
     a 0:00.903
     fire 0:01.609
@@ -68,5 +67,13 @@ lyrics_word = {
     I 0:26.000
     will 0:26.453
     do 0:26.720
-}
 """
+
+# transfer the lyrics to a list and convert time to seconds
+lyrics = lyrics_word.split()
+lyrics = [lyrics[i:i+2] for i in range(0, len(lyrics), 2)]
+for i in range(len(lyrics)):
+    lyrics[i][1] = lyrics[i][1].split(':')
+    lyrics[i][1] = float(lyrics[i][1][0]) * 60 + float(lyrics[i][1][1])
+
+print(lyrics)

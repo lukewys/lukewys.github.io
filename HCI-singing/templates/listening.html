@@ -19,7 +19,7 @@
 
     <!-- Tone Library recommended in Bitrate slack channel for music conversations -->
     <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
-    <title>Let's practice!</title>
+    <title>Let's Listen!</title>
 
     <!-- Materialize UI CSS and JS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -31,7 +31,7 @@
 
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/style.css">
     <!-- <script src="/static/scripts/plotly/dependencies/d3.v3.min.js"></script> -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -46,18 +46,38 @@
     </nav>
     <h2></h2>
 
+
     <div class="container">
 
 
         <h4 style="font-family: 'Nanum Myeongjo', serif;">Let's Listen! </h4>
+
         <h5 id="songName" style="font-family: 'Nanum Myeongjo', serif;"> </h5>
+        <a href="../templates/demo0.html" class="waves-effect waves-light btn-flat btn-large red lighten-3 right" id="help">Help!</a>
+
+        <form>
+            <label>Pitch</label>
+            <select id="pitch">
+                <option value = "O" selected>Original Key</option>
+                <option value = "-6">Lower Pitch</option>
+                <option value = "6">Higher Pitch</option>
+            </select>
+        </form>
+        <form>
+            <label>Tempo</label>
+            <select id="tempo">
+                <option value = "O" selected>Original Tempo</option>
+                <option value = "0.75">Slower</option>
+                <option value = "1.25">Faster</option>
+            </select>
+        </form>
         <div id="myDiv"></div>
 
         <div id="test1 " class="col s16 ">
             <h1></h1>
             <button class="waves-effect waves-light btn-flat btn-large indigo lighten-5 practice " id="start">Listen</button>
             <button class="waves-effect waves-light btn-flat btn-large indigo lighten-5 practice " id="stop">Stop</button>
-            <a href="singing.html" class="waves-effect waves-light btn-flat btn-large indigo lighten-5 practice right " id="get-started ">Sing</a>
+            <a href="../templates/singing.html " class="waves-effect waves-light btn-flat btn-large indigo lighten-5 practice right " id="get-started ">Sing</a>
         </div>
 
 
