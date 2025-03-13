@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>StemGen Reproduction - Vampnet Sampling - Temp Annealing - Large 8 RVQ Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        th:first-child,
+        td:first-child {
+            width: 150px;
+        }
+
+        /* Set a fixed width for the last column */
+        th:last-child,
+        td:last-child {
+            width: 200px;
+        }
+
+        /* Optionally, you can also set a fixed width for all audio elements */
+        audio {
+            width: 100%;
+            max-width: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Vampnet Sampling - Temp Annealing - Large 8 RVQ Model</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Target Instrument</th>
+                <th>Context Mix</th>
+                <th>Target Stem</th>
+                <th>Prediction</th>
+                <th>Pred-CFG</th>
+                <th>Target Mix</th>
+                <th>Pred Mix (Pred Amplified)</th>
+                <th>Pred-CFG in Mix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 8 rows for Generation table from cfg_1 folders 0 to 7 -->
+            <tr>
+                <td>1. Synth Lead</td>
+                <td>
+                    <audio controls>
+                        <source src="0/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="0/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>2. Piano</td>
+                <td>
+                    <audio controls>
+                        <source src="1/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="1/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>3. Reed</td>
+                <td>
+                    <audio controls>
+                        <source src="2/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="2/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>4. Guitar</td>
+                <td>
+                    <audio controls>
+                        <source src="3/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="3/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>5. Guitar</td>
+                <td>
+                    <audio controls>
+                        <source src="4/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="4/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>6. Guitar</td>
+                <td>
+                    <audio controls>
+                        <source src="5/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="5/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>7. Bass</td>
+                <td>
+                    <audio controls>
+                        <source src="6/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="6/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>8. Percussive</td>
+                <td>
+                    <audio controls>
+                        <source src="7/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="7/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>9. Synth Pad</td>
+                <td>
+                    <audio controls>
+                        <source src="8/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="8/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>10. Bass</td>
+                <td>
+                    <audio controls>
+                        <source src="9/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="9/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>11. Reed</td>
+                <td>
+                    <audio controls>
+                        <source src="10/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="10/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>12. Guitar</td>
+                <td>
+                    <audio controls>
+                        <source src="11/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="11/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>13. Piano</td>
+                <td>
+                    <audio controls>
+                        <source src="12/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="12/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>14. Piano</td>
+                <td>
+                    <audio controls>
+                        <source src="13/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="13/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>15. Guitar</td>
+                <td>
+                    <audio controls>
+                        <source src="14/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="14/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>16. Bass</td>
+                <td>
+                    <audio controls>
+                        <source src="15/input_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/target_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/pred_audio.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/pred_audio_cfg.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/mix_audio_gt.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/mix_audio_pred_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="15/mix_audio_cfg_loud.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+0: Synth Lead
+1: Piano
+2: Reed
+3: Guitar
+4: Guitar
+5: Guitar
+6: Bass
+7: Percussive
+8: Synth Pad
+9: Bass
+10: Reed
+11: Guitar
+12: Piano
+13: Piano
+14: Guitar
+15: Bass
