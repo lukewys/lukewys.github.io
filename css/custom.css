@@ -1,0 +1,13 @@
+.image.is-269by100 {
+    padding-top: 37.2%;
+    /* 618 / 1661 ≈ 0.372 */
+}
+
+.image.is-269by100 .has-ratio,
+.image.is-269by100 img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

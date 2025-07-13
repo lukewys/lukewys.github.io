@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--  <link rel="icon" href="favicon.png" type="image/x-icon">-->
     <link rel="stylesheet" href="css/main.bundle.css">
+    <link rel="stylesheet" href="css/custom.css">
     <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
 </head>
 
@@ -58,8 +59,9 @@
                             Yusong Wu (吴雨松)
                         </h1>
                         <h2 class="subtitle">
-                            Third-year PhD candidate at Mila, University of Montreal, focusing on interactive music
-                            generation.
+                            PhD at Mila, University of Montreal. Focusing on audio understanding, music generation, and
+                            real-time interactive models in music. <b>I will be looking for a industry position in late
+                                2025.</b>
                         </h2>
                         <div class="is-flex is-justify-content-center is-align-items-center">
                             <p class="mr-6">
@@ -84,14 +86,17 @@
         <div class="container">
             <h1 class="title">About Me</h1>
             <hr />
-            <p> I am a third-year PhD candidate in Computer Science at the University of Montreal and Mila.
+            <p> I am a PhD candidate in Computer Science at the University of Montreal and Mila.
                 I am fortunate to be co-advised by
                 <a href="https://mila.quebec/en/person/aaron-courville/">Professor Aaron Courville</a>
                 and <a href="https://mila.quebec/en/person/anna-huang/">Professor Chengzhi Anna Huang</a>.
-                My doctoral research focuses on developing interactive and creative music generation models.
-                I am also interested in multimodal learning approaches integrating music and audio.
+                My doctoral research focuses on audio understanding, music generation, creative and compositional
+                generative models, and real-time interactive models in music.
                 I am a percussionist who has performed timpani in orchestral settings. In my spare time, I also enjoy
                 playing the guitar and harmonica.
+                <br>
+                <b>I will be looking for a industry position in late 2025.</b>
+                <br>
             </p>
         </div>
     </section>
@@ -106,7 +111,7 @@
 
                     <li><b>Yusong Wu</b>, Christos Tsirigotis, Ke Chen, Cheng-Zhi Anna Huang, Aaron Courville, Oriol
                         Nieto, Prem Seetharaman, Justin Salamon:
-                        <i>Flam: Frame-wise language-audio modeling</i>.
+                        <i>FLAM: Frame-wise Language-Audio Modeling</i>.
                         <b>ICML 2025</b>
                     </li>
                     <li>Alexander Scarlatos, <b>Yusong Wu</b>, Ian Simon, Adam Roberts, Tim Cooijmans, Natasha Jaques,
@@ -166,6 +171,21 @@
         <div class="container">
             <h1 class="title">Projects</h1>
             <hr />
+            <!-- Stand-alone row for FLAM -->
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-12">
+                    <div class="tile">
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification">
+                                <p class="title">FLAM: Frame-wise Language-Audio Modeling</p>
+                                <figure class="image is-269by100">
+                                    <img class="modal-trigger" data-target="project-9-modal" src="img/flam_diagram.png">
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="tile is-ancestor">
                 <div class="tile is-vertical is-12">
@@ -187,6 +207,7 @@
                                 </figure>
                             </article>
                         </div>
+                        <!-- Removed FLAM tile here so this row now has two projects -->
                     </div>
                 </div>
             </div>
@@ -458,12 +479,19 @@
             <hr />
             <div class="content">
                 <ul>
-                    <il>Released <a href="https://github.com/lukewys/PianorollVis.js">PianorollVis.js</a>, a JavaScript
-                        library for visualizing pianoroll.</il>
-                    <li>Delivered a tutorial on <a href="https://github.com/lukewys/ISMIR2022-tutorial">designing
-                            controllable synthesis systems for musical signals</a> at ISMIR 2022.
+                    <li><strong>May&nbsp;2025</strong> — Guest lecture on ReaLchords &amp; ReaLJam at courses by
+                        Prof.&nbsp;Julian&nbsp;McAuley &amp; Shlomo&nbsp;Dubnov.</li>
+                    <li><strong>Apr&nbsp;2025</strong> — Invited talk on ReaLchords at Musical AI Agent meeting, SFU.
                     </li>
-
+                    <li><strong>Dec&nbsp;2024</strong> — Invited talk at Prof.&nbsp;Dina&nbsp;Katabi's lab meeting on
+                        neural audio codec, MIT.</li>
+                    <li><strong>Mar&nbsp;2024</strong> — Poster presentation on ReaLchords at NEMISIG&nbsp;2024.</li>
+                    <li><strong>2023</strong> — Released <a
+                            href="https://github.com/lukewys/PianorollVis.js">PianorollVis.js</a>, a JavaScript library
+                        for visualizing pianoroll.</li>
+                    <li><strong>2022</strong> — Delivered a tutorial on <a
+                            href="https://github.com/lukewys/ISMIR2022-tutorial">designing controllable synthesis
+                            systems for musical signals</a> at ISMIR&nbsp;2022.</li>
                 </ul>
             </div>
         </div>
@@ -821,6 +849,37 @@
                     <div class="tags">
                         <span class="tag">Real-time music accompaniment</span>
                         <span class="tag">Interactive music generation</span>
+                    </div>
+                </div>
+
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Close</button>
+            </footer>
+        </div>
+    </div>
+    <div id="project-9-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">FLAM: Frame-wise Language-Audio Modeling</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="project-9-modal-carousel" class="carousel">
+                    <figure class="image carousel-cell">
+                        <img src="img/flam_diagram.png">
+                    </figure>
+                </div>
+
+                <div class="content">
+                    <p>FLAM aligns language and audio at the frame level, enables open-set sound event detection and
+                        unlocking fine-grained multimodal tasks such as text-conditioned audio generation, localization,
+                        and separation.</p>
+                    <p><a href="https://arxiv.org/html/2505.05335v2">paper</a></p>
+                    <div class="tags">
+                        <span class="tag">Language-Audio Modeling</span>
+                        <span class="tag">Multimodal Learning</span>
                     </div>
                 </div>
 
